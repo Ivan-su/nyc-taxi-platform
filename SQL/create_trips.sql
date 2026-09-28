@@ -1,4 +1,3 @@
--- before any data was loaded through python script, created table with added id column for primary key, added trip month for future purpose
 create table trips (
 id						   int identity(1,1) primary key,
 VendorID                   int not null,
@@ -22,5 +21,4 @@ congestion_surcharge       NUMERIC(10,2),
 Airport_fee                NUMERIC(10,2),
 trip_month DATE NOT NULL  -- store as '2024-01-01', represents "this row is from Jan 2024"
 )
-
 
