@@ -1,0 +1,7 @@
+--busiest day of the week is Wednesday having 495032 pickups
+-- the least busiest day of the week is Sunday having 339312 pickups
+
+select datename(dw, t.tpep_pickup_datetime) as pickup_day, count(*) as trip_count
+from trips t
+group by datename(dw, t.tpep_pickup_datetime)
+order by trip_count desc;
